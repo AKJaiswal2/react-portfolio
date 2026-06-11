@@ -52,9 +52,8 @@ export const Hero = () => {
               backgroundColor: "#20B2A6",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
+              animation: `slow-drift ${15 + Math.random() * 20
+                }s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
             }}
           />
@@ -106,7 +105,7 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "https://github.com/AKJ-0483" },
+                { icon: Github, href: "https://github.com/AKJaiswal2" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/aman-jaiswal-6883b0184/" }
               ].map((social, idx) => (
                 <a
