@@ -1,28 +1,29 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { Brain, Code2, Cpu, Rocket } from "lucide-react";
 
 const highlights = [
+  {
+    icon: Brain,
+    title: "AI & LLM Systems",
+    description:
+      "Designing multi-agent pipelines and RAG systems powered by LLMs, LangChain, and LangGraph.",
+  },
+  {
+    icon: Cpu,
+    title: "Agentic Architectures",
+    description:
+      "Building autonomous agent workflows — supervisor routing, tool-calling, and memory-augmented reasoning.",
+  },
   {
     icon: Code2,
     title: "Clean Code",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Writing maintainable, scalable code across both backend systems and AI service layers.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Full-Stack Delivery",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
-  },
-  {
-    icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation",
-    description:
-      "Staying ahead with the latest technologies and best practices.",
+      "End-to-end ownership from API design and microservices to deploying production AI applications.",
   },
 ];
 
@@ -40,33 +41,33 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Building intelligent systems,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                one agent at a time.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-               I'm a passionate Software Development Engineer with 3+ years of experience building scalable backend systems and distributed applications. My journey began with a fascination for how large-scale applications handle millions of users and data in real time, which has evolved into a strong interest in system design, performance optimization, and cloud-native architectures.
+                I'm a Software Engineer with 3+ years of experience, now specializing at the intersection of backend engineering and AI systems. My journey started with building large-scale distributed backends — and has evolved into architecting intelligent, agentic applications powered by LLMs.
               </p>
               <p>
-               I specialize in NodeJS, TypeScript, NestJS, ReactJS, PostgreSQL, Redis, MongoDB, and AWS, building everything from high-performance APIs and microservices to fault-tolerant event-driven systems. My approach combines clean, maintainable code with a strong focus on scalability, reliability, and operational excellence.
+                I work extensively with LangChain, LangGraph, RAG pipelines, vector databases, and LLMs (Groq, Ollama, HuggingFace) to build multi-agent systems that reason, retrieve, and respond intelligently. On the backend, I bring deep expertise in Node.js, TypeScript, NestJS, PostgreSQL, Redis, MongoDB, and AWS.
               </p>
               <p>
-               When I'm not coding, you'll find me exploring distributed systems concepts, solving data structures and algorithms problems, experimenting with new technologies, or learning about emerging trends in AI and backend engineering.
+                When I'm not shipping code, I'm exploring the latest in Generative AI, agentic frameworks, and foundation models — constantly pushing the boundary between traditional software engineering and AI-native development.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                ""My mission is to transform complex engineering challenges into simple, scalable solutions — building systems that are fast, resilient, and designed to grow with the needs of millions of users."
+                "My mission is to fuse backend engineering excellence with the power of AI — building systems that don't just scale, but think."
               </p>
             </div>
           </div>
 
-          {/* Right Column - Hilights */}
+          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <div

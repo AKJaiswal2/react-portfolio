@@ -4,8 +4,26 @@ const experiences = [
     role: "Software Development Engineer",
     company: "Tech Alchemy Private Ltd.",
     description:
-      "At Tech Alchemy, I work as a Software Development Engineer, building scalable backend systems and distributed applications using Node.js, TypeScript, PostgreSQL, Redis, MongoDB, and AWS. My responsibilities include designing microservices, developing high-performance APIs, implementing event-driven architectures, optimizing database performance, and ensuring system reliability at scale. I have contributed to production-grade platforms serving thousands of users while solving complex challenges related to scalability, fault tolerance, and real-time data processing.",
-    technologies: ["NestJS", "TypeScript", "NodeJS", "Redis", "MongoDB", "PostgreSQL", "MySQL", "AWS", "ReactJS"],
+      "At Tech Alchemy, I work as a Software Development Engineer, building scalable backend systems, distributed applications, and AI-powered platforms. On the backend, I bring deep expertise in Node.js, TypeScript, NestJS, PostgreSQL, Redis, MongoDB, and AWS — designing microservices, developing high-performance APIs, implementing event-driven architectures, optimizing database performance, and ensuring system reliability at scale. I also work extensively with LangChain, LangGraph, RAG pipelines, vector databases, and LLMs (Groq, Ollama, HuggingFace) to build multi-agent systems that reason, retrieve, and respond intelligently. I have contributed to production-grade platforms serving thousands of users while solving complex challenges related to scalability, fault tolerance, real-time data processing, and intelligent automation.",
+    technologies: [
+      "NestJS",
+      "TypeScript",
+      "NodeJS",
+      "Redis",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "AWS",
+      "ReactJS",
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "Vector DB",
+      "LLMs",
+      "Groq",
+      "Ollama",
+      "HuggingFace",
+    ],
     current: true,
   }
 ];
@@ -69,11 +87,10 @@ export const Experience = () => {
 
                 {/* Content */}
                 <div
-                  className={`pl-8 md:pl-0 ${
-                    idx % 2 === 0
+                  className={`pl-8 md:pl-0 ${idx % 2 === 0
                       ? "md:pr-16 md:text-right"
                       : "md:col-start-2 md:pl-16"
-                  }`}
+                    }`}
                 >
                   <div
                     className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
@@ -87,9 +104,8 @@ export const Experience = () => {
                       {exp.description}
                     </p>
                     <div
-                      className={`flex flex-wrap gap-2 mt-4 ${
-                        idx % 2 === 0 ? "md:justify-end" : ""
-                      }`}
+                      className={`flex flex-wrap gap-2 mt-4 ${idx % 2 === 0 ? "md:justify-end" : ""
+                        }`}
                     >
                       {exp.technologies.map((tech, techIdx) => (
                         <span

@@ -10,24 +10,34 @@ import {
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
-  "TypeScript",
+  // AI / GenAI
+  "Generative AI",
+  "Agentic AI",
+  "LangChain",
+  "LangGraph",
+  "RAG",
+  "LLM",
+  "Groq",
+  "Ollama",
+  "HuggingFace",
+  "Vector DB",
+  "Tavily",
+  "Prompt Engineering",
+  // Backend
   "Node.js",
-  "React.js",
+  "TypeScript",
+  "NestJS",
   "PostgreSQL",
   "MongoDB",
   "Redis",
   "Docker",
   "AWS",
-  "Vercel",
-  "Html",
+  // Frontend
+  "React.js",
   "Tailwind CSS",
-  "TypeORM",
-  "Jest",
-  "Cypress",
-  "Figma",
+  // Dev Tools
   "Git",
   "GitHub Actions",
-  "AI Tools",
 ];
 
 export const Hero = () => {
@@ -68,7 +78,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • Backend Specialist
+                Software Engineer • AI Systems Builder
               </span>
             </div>
 
@@ -85,8 +95,8 @@ export const Hero = () => {
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                 Hi, I'm Aman Jaiswal — a software engineer specializing in
-                NodeJS, ReactJS, and TypeScript. I build scalable, performant web
-                applications that users love.
+                AI systems, multi-agent architectures, and backend engineering.
+                I build intelligent applications that reason, retrieve, and scale.
               </p>
             </div>
 

@@ -1,13 +1,23 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
 const projects = [
+  {
+    title: "ChatAI",
+    description:
+      "Multi-agent AI chat application powered by LangGraph, featuring an intelligent supervisor that dynamically routes queries across RAG, semantic memory, and real-time web search agents — all synthesized by a dedicated responder using Groq LLaMA 3.",
+    image: "/projects/project3.png",
+    tags: ["LangGraph", "LangChain", "RAG", "Groq", "LLM", "Node.js", "React", "HuggingFace", "Tavily", "Vector DB"],
+    link: "https://chat-ai-one-tan.vercel.app/",
+    featured: true,
+  },
   {
     title: "Web3Toolkit",
     description:
       "Real-time blockchain analytics platform for tracking on-chain transactions, analytics, and event processing at scale.",
     image: "/projects/project1.png",
     tags: ["NodeJS", "NestJS", "AWS", "MongoDB", "PostgreSQL", "Redis", "Socket.io", "Docker"],
-    link: "https://web3paymentsolutions.io/"
+    link: "https://web3paymentsolutions.io/",
   },
   {
     title: "AreYouIn",
@@ -39,39 +49,44 @@ export const Projects = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            A selection of my recent work — from scalable backend platforms to
+            intelligent AI-powered applications built with the latest LLM frameworks.
           </p>
         </div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, idx) => (
-            <div
+            <a
               key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group glass rounded-2xl overflow-hidden animate-fade-in block ${project.featured ? "md:col-span-2" : "md:row-span-1"
+                }`}
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
               {/* Image */}
-              <div className="relative overflow-hidden aspect-video">
+              <div className={`relative overflow-hidden ${project.featured ? "aspect-[21/9]" : "aspect-video"}`}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div
-                  className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
-                 to-transparent opacity-60"
-                />
-                {/* Overlay Links */}
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
+
+                {/* Featured badge */}
+                {project.featured && (
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary/20 border border-primary/40 text-primary text-xs font-semibold backdrop-blur-sm">
+                    ✦ AI Project
+                  </div>
+                )}
+
+                {/* Overlay link icon */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
+                  <div className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
                     <ArrowUpRight className="w-5 h-5" />
-                  </a>
+                  </div>
                 </div>
               </div>
 
@@ -81,16 +96,9 @@ export const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  {project.description}
-                </p>
+                <p className="text-muted-foreground text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIdx) => (
                     <span
@@ -102,10 +110,9 @@ export const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
-
       </div>
     </section>
   );
